@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://madko.xyz</id>
     <title>Koko `s Blog</title>
-    <updated>2020-05-16T16:31:59.347Z</updated>
+    <updated>2020-05-17T13:21:43.733Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://madko.xyz"/>
     <link rel="self" href="https://madko.xyz/atom.xml"/>
@@ -10,6 +10,20 @@
     <logo>https://madko.xyz/images/avatar.png</logo>
     <icon>https://madko.xyz/favicon.ico</icon>
     <rights>All rights reserved 2020, Koko `s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[2020.05.18 日记一则]]></title>
+        <id>https://madko.xyz/post/20200518/</id>
+        <link href="https://madko.xyz/post/20200518/">
+        </link>
+        <updated>2020-05-17T13:17:55.000Z</updated>
+        <content type="html"><![CDATA[<p>今天早上睁眼，就想着自己工作没完成 ，这种状态很好<br>
+加班反而效率不高<br>
+想清楚花的时间可能更久<br>
+Abletonlive还没下好<br>
+还被放了鸽子<br>
+现在真的是没以前能吃了</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[2020.05.17日记一则]]></title>
         <id>https://madko.xyz/post/20200517/</id>
