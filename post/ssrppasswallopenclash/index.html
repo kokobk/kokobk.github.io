@@ -27,7 +27,7 @@
 <div style="float:right;margin-top:1em"><form id="gridea-search-form" data-update="1578893743252" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="Search..."></form></div><div style="margin-left:0.5em;margin-top:1.2em"><input id="switch_default" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
 <div class="clear clear_nav_inline_end"></div></div></div><div class="clear clear_nav_end"></div></div></div><div class="hamberger" href="javascript:void(0)" onclick="btn_toggle();"><i class="iconfont icon-category"></i></div></div></div></div>
 <div id="hn" class="no-js hidden_nav animated fadeInDown"><div class="bitcron_nav_container"><div class="bitcron_nav"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a></li></ul><div class="clear clear_nav_inline_end"></div></nav></div><div class="clear clear_nav_end"></div></div>
-<div style="display:flex;justify-content:center;inline-block;text-align:center;margin-top:7%"><div><form id="gridea-search-form" data-update="1592643884675" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q"  placeholder="Search..." /></form></div><div style="margin-left:0.5em"><input id="switch_default_h" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+<div style="display:flex;justify-content:center;inline-block;text-align:center;margin-top:7%"><div><form id="gridea-search-form" data-update="1592653547054" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q"  placeholder="Search..." /></form></div><div style="margin-left:0.5em"><input id="switch_default_h" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
 </div></div>
 <script>function enableDarkmode(){document.body.classList.add("darkmode"),document.getElementById("switch_default").checked=1,document.getElementById("switch_default_h").checked=1}function removeDarkmode(){document.body.classList.remove("darkmode"),document.getElementById("switch_default").checked=0,document.getElementById("switch_default_h").checked=0}function getCookie(a){var b,c=new RegExp("(^| )"+a+"=([^;]*)(;|$)");return(b=document.cookie.match(c))?unescape(b[2]):null}cookie=getCookie("darkmode"),"enable"==cookie&&enableDarkmode(),window.matchMedia("(prefers-color-scheme: dark)").matches&&"disable"!==cookie&&(enableDarkmode(),document.cookie="darkmode=enable; path=/");var mobileBtn=function(){1==document.getElementById("switch_default").checked?(enableDarkmode(),document.cookie="darkmode=enable; path=/"):(removeDarkmode(),document.cookie="darkmode=disable; path=/")};</script>
 
@@ -48,7 +48,7 @@
 <p>结果：从性能上来说，SSRP≈Passwall＞Openclash</p>
 <p>然而不能不提的时，SSRP和Openclash这两个插件仍在运行而Passwall已经停止维护了<br>
 最终作者个人推荐的是SSRP</p>
-<h2 id="补充观点">补充观点</h2>
+<h3 id="补充观点">补充观点</h3>
 <p>评论区有一位自称SSRP贡献者的朋友表达了自己的观点，同时记录作为补充。</p>
 <blockquote>
 <p>作为ssr-plus的contributor，我说几句ssrp和passwall的差异，及一些看法的纠正。 1. ssrp没有停更，更新地址在<a href="https://github.com/fw876/helloworld">https://github.com/fw876/helloworld</a> L大固件内想集成ssrp只需将编译根目录里面的feeds.conf.default文件内Helloworld前的 # 删除即可 2. L大固件集成ssrp后，DNS有三套，一套是默认wan口DNS，二是你在插件设置的外网DNS，三是Netflix分流所用的DNS。所以科学上网不需要使用SmartDNS和Turbo ACC中的DNS加速，使用运营商默认DNS即可，如果运营商DNS有劫持，把接口中Lan口DNS设置为你想要的即可，要是运营商强行抢答或劫持53端口，请在浏览器中使用DoH或DoT。 3. 对于自动切换功能，ssrp的逻辑是切过去看能不能wget到www.google.com这个网页，而不是看能不能ping通，passwall用的是haproxy，切换只看能否ping通。这对VPS梯子用户区别不大，但是对机场用户影响很大。 4. 所谓的“旁路由”是ks搞出来的，真正的名字是“单臂路由”。 5. ssrp支持socks5套娃模式，K2P+N1也能跑出400M。具体实现如下，K2P做主路由，N1网关设为K2P并关闭DHCP。N1正常订阅选好节点，并在服务端开启socks5服务器，K2P的ssrp节点设置为N1的socks5节点，并在访问控制排除代理N1的IP。这样做有一个好处，传统单臂路由解决方案中，一旦单臂路由故障或不能上网，会导致无法访问所有网站。而套娃模式中，N1故障也仅仅会导致无法科学上网，不影响国内网站访问。 6. 少折腾DNS，默认即可。正常网络环境下，几毫秒的延迟根本感受不到。如果你相信DNS能提升你的网速，建议使用PDNSD + DNSForwarder + DNSEncrypto + ChinaDNS-NG + SmartDNS + AdGuardHome + Pi-Hole +DNSMASQ + ssr-plus + ssr-Jeo + passwall + clash + openclash + helloworld来达到万兆网速</p>
@@ -66,9 +66,9 @@
 <li><a href="#ssrpopenclashpasswall%E5%AF%B9%E6%AF%94">SSRP/OPENCLASH/passwall对比</a>
 <ul>
 <li><a href="#%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C">测试结果</a></li>
+<li><a href="#%E8%A1%A5%E5%85%85%E8%A7%82%E7%82%B9">补充观点</a></li>
 </ul>
 </li>
-<li><a href="#%E8%A1%A5%E5%85%85%E8%A7%82%E7%82%B9">补充观点</a></li>
 </ul>
 </li>
 </ul>
